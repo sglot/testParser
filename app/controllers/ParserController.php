@@ -1,66 +1,151 @@
 <?php
+
 namespace app\controllers;
 
 require 'C:\xampp\htdocs\testParser\app\console\phpQuery\phpQuery\phpQuery.php';
 
-use GuzzleHttp\Client;
+
+use app\common\HttpClient\HttpClient;
+use Monolog\Logger;
+use PDO;
+use PDOException;
+
 
 class ParserController extends Controller
 {
     const URLS = [
-        'Полный метр' => 'cinema/rating_top.php'
+        'Полный метр' => 'cinema/rating_top.php',
+        'Западные сериалы' => 'cinema/rating_tv_top.php?public_list_anchor=1',
     ];
+
+    const IMG_PATH = __DIR__ . '\..\..\upload\img\\';
+
+    private $logger;
+    private $client;
+
+    public function __construct(Logger $logger, HttpClient $client)
+    {
+        $this->logger = $logger;
+        $this->client = $client;
+    }
 
     public function parse()
     {
-        $client = new Client(['base_uri' => 'http://www.world-art.ru/']);
-        $response = $client->request('GET', self::URLS['Полный метр'], [
-            'headers' => [
-                'Accept'     => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
-            ]]);
+        $this->logger->info('Старт скрипта');
 
-        $strOriginalEncoding = $response->getBody()->getContents();
-//$string = mb_convert_encoding($response->getBody()->getContents(), "cp-1251", "UTF-8");
-        $string =  iconv('windows-1251', 'UTF-8', $strOriginalEncoding);
+        foreach (self::URLS as $name => $url) {
+            $strOriginalEncoding = $this->client->sendRequest($url);
+
+//            $strOriginalEncoding = mb_convert_encoding($strOriginalEncoding, "cp-1251", "UTF-8");
+//            $strOriginalEncoding = iconv('windows-1251', 'UTF-8', $strOriginalEncoding);
 //        var_dump($string);
-
 //        $doc = \phpQuery::newDocument($string);
-        $doc = \phpQuery::newDocument($strOriginalEncoding);
-        $p = $doc->find('title')->text();
-        var_dump($p);
-        echo  "--------------<br><br><br><br>";
+            $doc = \phpQuery::newDocument($strOriginalEncoding);
+            $p = $doc->find('title')->text();
+            var_dump($p);
+            echo "--------------<br><br><br><br>";
 
-        $p = $doc->find('h3')->parent();
-        $p = $p->find('center table ~ table');
-        $p = $p->next()->next();
-        $p = $p->find('tr');
+            $p = $doc->find('h3')->parent();
+            $p = $p->find('center table ~ table');
+            $p = $p->next()->next();
+            $p = $p->find('tr');
 
-        $res = [];
-        foreach ($p as $trKey => $tr) {
-            $pq = pq($tr);
-            $row =  $pq->find('td');
-//            var_dump($row);die();
-            $res[$trKey][0] = $pq->find('td:eq(0)')->text();
-            $res[$trKey][1] = $pq->find('td:eq(1)')->text();
-            $res[$trKey][2] = $pq->find('td:eq(2)')->text();
-            $res[$trKey][3] = $pq->find('td:eq(3)')->text();
-            $res[$trKey][4] = $pq->find('td:eq(4)')->text();
+            $res = [];
+            foreach ($p as $trKey => $tr) {
+                if ($trKey === 0) {
+                    continue;
+                }
 
+                $pq = pq($tr);
+                $res[$trKey]['number'] = $pq->find('td:eq(0)')->text();
+                $res[$trKey]['title'] = $pq->find('td:eq(1)')->text();
+                $res[$trKey]['average_score'] = $pq->find('td:eq(2)')->text();
+                $res[$trKey]['votes'] = $pq->find('td:eq(3)')->text();
+                $res[$trKey]['calculated_score'] = $pq->find('td:eq(4)')->text();
+
+                $res[$trKey]['href'] = 'cinema/' . $pq->find('td:eq(1) > a')->attr('href');
+                $res[$trKey]['detail'] = $this->parseCinemaDetail($res[$trKey]['href']);
+
+                if ($trKey > 5) {
+                    break;
+                }
+            }
+
+
+            echo "<br><br><br><br><br>res===<br><pre>";
+            var_dump($res);
+            echo "--------------<br>";
+            echo mb_detect_encoding($p);
+            $this->db($res, $name);
         }
 
-        echo "<br><br><br><br><br>res===<br><pre>";
-        var_dump($res);
-
-        echo  "--------------<br>";
-//$str = mb_convert_encoding($p, "UTF-8");
-//        var_dump($p);
-        echo mb_detect_encoding($p);
-
         echo 'script finished';
+        $this->logger->info('Скрипт отработал успешно');
 
     }
 
+    private function parseCinemaDetail(string $url): array
+    {
+        $res = [];
+        $strOriginalEncoding = $this->client->sendRequest($url);
+        $doc = \phpQuery::newDocument($strOriginalEncoding);
+        $p = $doc->find('font:contains(Краткое содержание)')->parent()->parent()->parent()->parent()->next()->text();
+        $res['description'] = $p;
+
+        $img = 'cinema/' . $doc->find('img:eq(1)')->attr('src');
+        var_dump($img);
+        $res['img'] = $img;
+
+        $res['id'] = mb_substr(stristr($url, 'id='), 3);
+        $res['img_path'] = $this->getImage($res['img'], $res['id']);
+
+
+        return $res;
+    }
+
+    private function getImage(string $url, string $id): string
+    {
+        try {
+            $path = self::IMG_PATH . $id . '.jpg';
+            $img = $this->client->sendRequest($url);
+            $file = fopen($path, 'w');
+            fwrite($file, $img);
+            fclose($file);
+
+        } catch (\Exception $exception) {
+            $this->logger->error($exception->getMessage());
+            die();
+        }
+
+        return $id . '.jpg';
+    }
+
+    private function db($data, $category)
+    {
+        echo "=================================== PХАПРОС В БД";
+        try {
+            $dbh = new PDO('mysql:host=localhost;dbname=test_parser;charset=utf8', 'root', '');
+
+            foreach ($data as $cinema) {
+                $sql = sprintf("INSERT INTO cinema (origin_id, title, category, image, description)
+VALUES (%d, '%s', '%s', '%s', '%s')",
+                    $cinema['detail']['id'],
+                    $cinema['title'],
+                    $category,
+                    $cinema['detail']['img_path'],
+                    $cinema['detail']['description']
+                );
+
+                $dbh->query($sql);
+            }
+
+
+            $dbh = null;
+        } catch (PDOException $e) {
+            $this->logger->error($e->getMessage());
+            die();
+        }
+    }
     public function test()
     {
 
