@@ -10,7 +10,7 @@ return [
     ],
 
     'migrations_paths' => [
-        'app\migrations' => '.\app\migrations',
+        'migrations' => '.\migrations',
     ],
 //    'migrations' => [
 //        'app\migrations\NewMigration',
