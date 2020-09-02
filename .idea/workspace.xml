@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70500cd3-ba36-4171-b99e-64eee3da8b4f" name="Default Changelist" comment="find selectors">
-      <change afterPath="$PROJECT_DIR$/app/common/HttpClient/HttpClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="70500cd3-ba36-4171-b99e-64eee3da8b4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7614b495-7e35-419e-93b4-bb7e645886dc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7614b495-7e35-419e-93b4-bb7e645886dc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/testParser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/testParser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/console/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/console/script.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/CinemaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CinemaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ParserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ParserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20200831122438.php" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/Version20200831122438.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
@@ -76,29 +67,31 @@
     <session id="-53091067">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cinema" value="3" />
+          <entry key="cinema" value="4" />
           <entry key="doctrine_migration_versions" value="3" />
           <entry key="gitignore" value="2" />
           <entry key="jpg" value="10" />
           <entry key="json" value="2" />
-          <entry key="log" value="17" />
-          <entry key="php" value="19" />
+          <entry key="log" value="19" />
+          <entry key="php" value="27" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="6" />
+          <entry key="Database Element" value="7" />
           <entry key="Image" value="10" />
           <entry key="JSON" value="2" />
-          <entry key="Log" value="17" />
-          <entry key="PHP" value="19" />
+          <entry key="Log" value="19" />
+          <entry key="PHP" value="27" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -108,33 +101,33 @@
           <entry key="cell" value="1" />
           <entry key="gitignore" value="24" />
           <entry key="json" value="2" />
-          <entry key="php" value="2691" />
+          <entry key="php" value="3295" />
           <entry key="sql" value="31" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="2691" />
-          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="PHP" value="3295" />
+          <entry key="PLAIN_TEXT" value="76" />
           <entry key="Scratch" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="1" />
+          <entry key="PHP Class.type" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/console/script.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="357">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#30#67#0#PHP" expanded="true" />
               </folding>
@@ -143,61 +136,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/app.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="52">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/DB/Base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+              <folding>
+                <element signature="e#34#58#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/conf.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/Registry/Registry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/common/DB/CinemaManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+            <state relative-caret-position="272">
+              <caret line="151" column="12" lean-forward="true" selection-start-line="151" selection-start-column="12" selection-end-line="152" selection-end-column="18" />
               <folding>
                 <element signature="e#118#155#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-              <folding>
-                <element signature="e#2840#2847#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/migrations/Version20200831122438.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/HttpClient/HttpClient.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -220,9 +213,13 @@
         <option value="$PROJECT_DIR$/logs/app.log" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql" />
-        <option value="$PROJECT_DIR$/app/controllers/ParserController.php" />
         <option value="$PROJECT_DIR$/views/index.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/common/Registry/Registry.php" />
+        <option value="$PROJECT_DIR$/app/common/DB/CinemaManager.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ParserController.php" />
+        <option value="$PROJECT_DIR$/app/common/DB/Base.php" />
+        <option value="$PROJECT_DIR$/conf/conf.php" />
         <option value="$PROJECT_DIR$/app/console/script.php" />
       </list>
     </option>
@@ -282,7 +279,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,6 +301,20 @@
               <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="testParser" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="DB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testParser" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="Registry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testParser" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="console" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,6 +322,11 @@
               <item name="testParser" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testParser" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
@@ -327,12 +342,6 @@
               <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="testParser" type="462c0819:PsiDirectoryNode" />
               <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testParser" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
@@ -353,6 +362,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -360,12 +370,12 @@
     <property name="database.console.LAST_STATE" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\testParser" />
+      <recent name="C:\xampp\htdocs\testParser\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\testParser\app\controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\testParser\app" />
-      <recent name="C:\xampp\htdocs\testParser" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -390,7 +400,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598934843030</updated>
-      <workItem from="1598934844466" duration="29653000" />
+      <workItem from="1598934844466" duration="29784000" />
+      <workItem from="1599022536277" duration="6936000" />
     </task>
     <task id="LOCAL-00001" summary="find selectors">
       <created>1598952232834</created>
@@ -399,20 +410,27 @@
       <option name="project" value="LOCAL" />
       <updated>1598952232834</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="find selectors">
+      <created>1598968822896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598968822896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29653000" />
+    <option name="totallyTimeSpent" value="36720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16187595" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16414523" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.33934426" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.12131148" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
@@ -486,45 +504,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/HttpClient/HttpClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/console/app.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/4110.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.log" />
+    <entry file="file://$PROJECT_DIR$/app/console/app.log" />
+    <entry file="file://$PROJECT_DIR$/web/4110.jpg" />
     <entry file="file://$PROJECT_DIR$/upload/img/4110.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/Version20200831122438.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/5397.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/img/5397.jpg" />
+    <entry file="file://$PROJECT_DIR$/upload/img/8.jpg" />
     <entry file="file://$PROJECT_DIR$/upload/img/65021.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -547,20 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/app.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7614b495-7e35-419e-93b4-bb7e645886dc/schema/test_parser/table/cinema">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -568,23 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-          <folding>
-            <element signature="e#118#155#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="833">
           <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-          <folding>
-            <element signature="e#2840#2847#1#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -595,10 +555,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Registry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1393">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations/Version20200831122438.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7614b495-7e35-419e-93b4-bb7e645886dc/schema/test_parser/table/cinema">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/HttpClient/HttpClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/Registry/Registry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/DB/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/conf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/DB/CinemaManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="151" column="12" lean-forward="true" selection-start-line="151" selection-start-column="12" selection-end-line="152" selection-end-column="18" />
+          <folding>
+            <element signature="e#118#155#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/app.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="52">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/console/script.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#30#67#0#PHP" expanded="true" />
           </folding>

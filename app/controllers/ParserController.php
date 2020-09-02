@@ -6,6 +6,8 @@ require 'C:\xampp\htdocs\testParser\app\console\phpQuery\phpQuery\phpQuery.php';
 
 
 use app\common\HttpClient\HttpClient;
+
+use app\common\Registry;
 use Monolog\Logger;
 use PDO;
 use PDOException;
@@ -22,11 +24,16 @@ class ParserController extends Controller
 
     private $logger;
     private $client;
+    private $registry;
+    private $cinemaManager;
 
     public function __construct(Logger $logger, HttpClient $client)
     {
         $this->logger = $logger;
         $this->client = $client;
+        $this->registry = Registry::instance();
+        $this->cinemaManager = $this->registry->getCinemaManager();
+
     }
 
     public function parse()
@@ -66,7 +73,7 @@ class ParserController extends Controller
                 $res[$trKey]['href'] = 'cinema/' . $pq->find('td:eq(1) > a')->attr('href');
                 $res[$trKey]['detail'] = $this->parseCinemaDetail($res[$trKey]['href']);
 
-                if ($trKey > 5) {
+                if ($trKey > 1) {
                     break;
                 }
             }
@@ -76,7 +83,7 @@ class ParserController extends Controller
             var_dump($res);
             echo "--------------<br>";
             echo mb_detect_encoding($p);
-            $this->db($res, $name);
+            $this->cinemaManager->addCinemaList($res, $name);
         }
 
         echo 'script finished';
