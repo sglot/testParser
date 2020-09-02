@@ -16,12 +16,16 @@ use Monolog\Logger;
 class ParserController extends Controller
 {
 
+    const IMG_PATH = __DIR__ . '\..\..\upload\img\\';
+
     const URLS = [
         'Полный метр' => 'cinema/rating_top.php',
         'Западные сериалы' => 'cinema/rating_tv_top.php?public_list_anchor=1',
-    ];
+        'Японские дорамы' => 'cinema/rating_tv_top.php?public_list_anchor=2',
+        'Корейские дорамы' => 'cinema/rating_tv_top.php?public_list_anchor=4',
+        'Русские сериалы' => 'cinema/rating_tv_top.php?public_list_anchor=3',
 
-    const IMG_PATH = __DIR__ . '\..\..\upload\img\\';
+    ];
 
     /**
      * @var Logger
@@ -91,7 +95,7 @@ class ParserController extends Controller
                 $res[$trKey]['year'] = (int)substr($res[$trKey]['title'], $startYearPos + 1, 4);
                 $res[$trKey]['title'] = substr($res[$trKey]['title'], 0, $startYearPos - 1);
 
-                if ($trKey > 1) {
+                if ($trKey > 10) {
                     break;
                 }
             }

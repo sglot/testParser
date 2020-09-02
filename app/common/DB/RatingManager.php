@@ -9,7 +9,7 @@ namespace app\common\DB;
  */
 class RatingManager extends Base
 {
-    private $findRating = "select * from ratings where date_created = :date_created order by category asc, :field_filter asc limit 10";
+    private $findRating = "select * from (select * from ratings where date_created = :date_created and pos <= 10 order by category asc, :field_filter asc) as r left join cinema on r.cinema_id = cinema.origin_id";
 
     /**
      * @param string $filter
@@ -25,7 +25,7 @@ class RatingManager extends Base
             'date_created' => $date,
             'field_filter' => $filter
         ]);
-        $res = $stmt->fetchAll();
+        $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
         return $res;
     }

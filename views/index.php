@@ -13,54 +13,55 @@
             <h1 class="mb-4 mt-4" style="text-align: center">Рейтинг кино и сериалов по версии сайта <a href="http://www.world-art.ru">World Art</a></h1>
 
             <form>
-                <div class="form-group">
-                    <label for="dateInput">Введите дату для выборки</label>
-                    <input type="text" class="form-control w-50" id="dateInput" required placeholder="2020-08-31">
+                <div class="form-group d-flex flex-row justify-content-center">
+                    <input type="text" style="width: 30%; text-align: center" class="form-control m-2" id="dateInput" required placeholder="2020-08-31">
+                    <button type="button" onclick="filterData()" class="btn btn-primary m-2">Выбрать по дате</button>
                 </div>
             </form>
             <pre>
-<?php
-    if (isset($data['rating'])) {
-//        var_dump($data['rating']);
-        foreach($data['rating'] as $row) {
-        }
-    }
-//die();
-?>
-            <h2 class="mt-2 mb-2" style="text-align: center">Категория</h2>
+            <?php
+            if (isset($data['rating'])):
+//                var_dump($data['rating']);
+                foreach($data['rating'] as $nameCategory => $category):
+            ?>
+
+
 
             <table class="table">
                 <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Название</th>
-                    <th scope="col">Расчетный балл</th>
-                    <th scope="col">Голосов</th>
-                    <th scope="col">Средний балл</th>
-                    <th scope="col">Год</th>
-                </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Расчетный балл</th>
+                        <th scope="col">Средний балл</th>
+                        <th scope="col">Голосов</th>
+                        <th scope="col">Год</th>
+                    </tr>
                 </thead>
+
+
+                <h2 class="mt-2 mb-2" style="text-align: center"><?=$nameCategory?></h2>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td data-toggle="modal" data-target="#exampleModal">Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td data-toggle="modal" data-target="#exampleModal">Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td data-toggle="modal" data-target="#exampleModal">Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                    <?php foreach($category as $key => $cinema):?>
+                        <tr>
+                            <th scope="row"><?=$cinema['pos']?></th>
+                            <td style="cursor: pointer" data-toggle="modal" data-target="#exampleModal"><?=$cinema['title']?></td>
+                            <td><?=$cinema['average_score']?></td>
+                            <td><?=$cinema['calculated_score']?></td>
+                            <td><?=$cinema['votes']?></td>
+                            <td><?=$cinema['year']?></td>
+                        </tr>
+                    <?php endforeach;?>
                 </tbody>
             </table>
+
+
+            <?php
+                endforeach;
+            endif;
+
+            ?>
+
 
         </div>
 
@@ -92,7 +93,8 @@
         </div>
 
 <?php
-require 'C:\xampp\htdocs\testParser\app\console\script.php';
+
+//require 'C:\xampp\htdocs\testParser\app\console\script.php';
 
 
 
@@ -103,6 +105,8 @@ require 'C:\xampp\htdocs\testParser\app\console\script.php';
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script src="js/main.js"></script>
         </footer>
     </body>
 </html>

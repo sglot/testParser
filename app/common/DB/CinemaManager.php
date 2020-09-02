@@ -13,6 +13,7 @@ class CinemaManager extends Base
     private $addRating = "INSERT INTO ratings (id, cinema_id, pos, category, average_score, calculated_score, votes, date_created) VALUES (null, ?, ?, ?, ?, ?, ?, CURRENT_DATE())";
     private $selectRatingIdIfDuplicate = "select id from ratings where date_created = CURRENT_DATE() and cinema_id = :cinema_id";
     private $updateRating = "UPDATE ratings SET pos=:pos, average_score =:average_score, calculated_score =:calculated_score, votes =:votes where date_created = CURRENT_DATE() and cinema_id = :cinema_id";
+    private $getCinemaByOriginId = "select * from cinema where origin_id = :origin_id";
 
     /**
      * @param array $list
@@ -38,7 +39,7 @@ class CinemaManager extends Base
                     'cinema_id' => $cinema['detail']['id'],
                 ]
             );
-            $res = $stmt->fetch();
+            $res = $stmt->fetch(\PDO::FETCH_ASSOC);
 
             if (isset($res['id'])) {
                 echo 'isset+++ updating';
@@ -69,6 +70,17 @@ class CinemaManager extends Base
 
         }
 
+    }
+
+    public function getCinemaByOriginId(int $origin_id): array
+    {
+        $pdo = $this->getPdo();
+        $stmt = $pdo->prepare($this->getCinemaByOriginId);
+        $stmt->execute([
+                'origin_id' => $origin_id,
+            ]
+        );
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
 }
