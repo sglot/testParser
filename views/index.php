@@ -18,7 +18,15 @@
                     <input type="text" class="form-control w-50" id="dateInput" required placeholder="2020-08-31">
                 </div>
             </form>
-
+            <pre>
+<?php
+    if (isset($data['rating'])) {
+//        var_dump($data['rating']);
+        foreach($data['rating'] as $row) {
+        }
+    }
+//die();
+?>
             <h2 class="mt-2 mb-2" style="text-align: center">Категория</h2>
 
             <table class="table">

@@ -4,8 +4,17 @@ namespace app\common\HttpClient;
 
 use GuzzleHttp\Client;
 
+/**
+ * Class HttpClient
+ * @package app\common\HttpClient
+ */
 class HttpClient
 {
+    /**
+     * @param string $url
+     * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function sendRequest(string $url): string
     {
         $client = new Client(['base_uri' => 'http://www.world-art.ru/']);

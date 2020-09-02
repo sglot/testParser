@@ -2,19 +2,20 @@
 
 namespace app\controllers;
 
-require 'C:\xampp\htdocs\testParser\app\console\phpQuery\phpQuery\phpQuery.php';
-
+require __DIR__ . '\..\..\app\console\phpQuery\phpQuery\phpQuery.php';
 
 use app\common\HttpClient\HttpClient;
-
 use app\common\Registry;
 use Monolog\Logger;
-use PDO;
-use PDOException;
 
 
+/**
+ * Class ParserController
+ * @package app\controllers
+ */
 class ParserController extends Controller
 {
+
     const URLS = [
         'Полный метр' => 'cinema/rating_top.php',
         'Западные сериалы' => 'cinema/rating_tv_top.php?public_list_anchor=1',
@@ -22,11 +23,28 @@ class ParserController extends Controller
 
     const IMG_PATH = __DIR__ . '\..\..\upload\img\\';
 
+    /**
+     * @var Logger
+     */
     private $logger;
+    /**
+     * @var HttpClient
+     */
     private $client;
+    /**
+     * @var Registry
+     */
     private $registry;
+    /**
+     * @var \app\common\DB\CinemaManager
+     */
     private $cinemaManager;
 
+    /**
+     * ParserController constructor.
+     * @param Logger $logger
+     * @param HttpClient $client
+     */
     public function __construct(Logger $logger, HttpClient $client)
     {
         $this->logger = $logger;
@@ -43,10 +61,6 @@ class ParserController extends Controller
         foreach (self::URLS as $name => $url) {
             $strOriginalEncoding = $this->client->sendRequest($url);
 
-//            $strOriginalEncoding = mb_convert_encoding($strOriginalEncoding, "cp-1251", "UTF-8");
-//            $strOriginalEncoding = iconv('windows-1251', 'UTF-8', $strOriginalEncoding);
-//        var_dump($string);
-//        $doc = \phpQuery::newDocument($string);
             $doc = \phpQuery::newDocument($strOriginalEncoding);
             $p = $doc->find('title')->text();
             var_dump($p);
@@ -64,7 +78,7 @@ class ParserController extends Controller
                 }
 
                 $pq = pq($tr);
-                $res[$trKey]['number'] = $pq->find('td:eq(0)')->text();
+                $res[$trKey]['position'] = $pq->find('td:eq(0)')->text();
                 $res[$trKey]['title'] = $pq->find('td:eq(1)')->text();
                 $res[$trKey]['average_score'] = $pq->find('td:eq(2)')->text();
                 $res[$trKey]['votes'] = $pq->find('td:eq(3)')->text();
@@ -72,6 +86,10 @@ class ParserController extends Controller
 
                 $res[$trKey]['href'] = 'cinema/' . $pq->find('td:eq(1) > a')->attr('href');
                 $res[$trKey]['detail'] = $this->parseCinemaDetail($res[$trKey]['href']);
+
+                $startYearPos = strpos($res[$trKey]['title'], '[');
+                $res[$trKey]['year'] = (int)substr($res[$trKey]['title'], $startYearPos + 1, 4);
+                $res[$trKey]['title'] = substr($res[$trKey]['title'], 0, $startYearPos - 1);
 
                 if ($trKey > 1) {
                     break;
@@ -91,6 +109,11 @@ class ParserController extends Controller
 
     }
 
+    /**
+     * @param string $url
+     * @return array
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     private function parseCinemaDetail(string $url): array
     {
         $res = [];
@@ -99,17 +122,20 @@ class ParserController extends Controller
         $p = $doc->find('font:contains(Краткое содержание)')->parent()->parent()->parent()->parent()->next()->text();
         $res['description'] = $p;
 
-        $img = 'cinema/' . $doc->find('img:eq(1)')->attr('src');
-        var_dump($img);
-        $res['img'] = $img;
-
+        $res['img'] = 'cinema/' . $doc->find('img:eq(1)')->attr('src');
+        var_dump($res['img']);
         $res['id'] = mb_substr(stristr($url, 'id='), 3);
         $res['img_path'] = $this->getImage($res['img'], $res['id']);
-
 
         return $res;
     }
 
+    /**
+     * @param string $url
+     * @param string $id
+     * @return string
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     private function getImage(string $url, string $id): string
     {
         try {
@@ -127,37 +153,6 @@ class ParserController extends Controller
         return $id . '.jpg';
     }
 
-    private function db($data, $category)
-    {
-        echo "=================================== PХАПРОС В БД";
-        try {
-            $dbh = new PDO('mysql:host=localhost;dbname=test_parser;charset=utf8', 'root', '');
 
-            foreach ($data as $cinema) {
-                $sql = sprintf("INSERT INTO cinema (origin_id, title, category, image, description)
-VALUES (%d, '%s', '%s', '%s', '%s')",
-                    $cinema['detail']['id'],
-                    $cinema['title'],
-                    $category,
-                    $cinema['detail']['img_path'],
-                    $cinema['detail']['description']
-                );
-
-                $dbh->query($sql);
-            }
-
-
-            $dbh = null;
-        } catch (PDOException $e) {
-            $this->logger->error($e->getMessage());
-            die();
-        }
-    }
-    public function test()
-    {
-
-        echo "test";
-
-    }
 }
 

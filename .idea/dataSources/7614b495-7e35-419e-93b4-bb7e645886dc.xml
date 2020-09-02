@@ -1361,81 +1361,113 @@
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="340" parent="331" name="PRIMARY">
+    <column id="340" parent="331" name="year">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="341" parent="331" name="origin_id">
+      <ColNames>origin_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="342" parent="331" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="341" parent="332" name="version">
+    <key id="343" parent="331" name="origin_id">
+      <ColNames>origin_id</ColNames>
+      <UnderlyingIndexName>origin_id</UnderlyingIndexName>
+    </key>
+    <column id="344" parent="332" name="version">
       <Position>1</Position>
       <DataType>varchar(1024)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="332" name="executed_at">
+    <column id="345" parent="332" name="executed_at">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="332" name="execution_time">
+    <column id="346" parent="332" name="execution_time">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="344" parent="332" name="PRIMARY">
+    <key id="347" parent="332" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="345" parent="333" name="id">
+    <column id="348" parent="333" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="333" name="category">
+    <column id="349" parent="333" name="cinema_id">
       <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="333" name="category">
+      <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="333" name="pos">
-      <Position>3</Position>
+    <column id="351" parent="333" name="pos">
+      <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="333" name="date_created">
-      <Position>4</Position>
+    <column id="352" parent="333" name="date_created">
+      <Position>5</Position>
       <DataType>date|0s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="333" name="average_score">
-      <Position>5</Position>
-      <DataType>float|0s</DataType>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="350" parent="333" name="calculated_score">
+    <column id="353" parent="333" name="average_score">
       <Position>6</Position>
       <DataType>float|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="333" name="votes">
+    <column id="354" parent="333" name="calculated_score">
       <Position>7</Position>
+      <DataType>float|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="355" parent="333" name="votes">
+      <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="352" parent="333" name="PRIMARY">
+    <index id="356" parent="333" name="cinema_id">
+      <ColNames>cinema_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="357" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="358" parent="333" name="ratings_ibfk_1">
+      <ColNames>cinema_id</ColNames>
+      <RefSchemaName>test_parser</RefSchemaName>
+      <RefTableName>cinema</RefTableName>
+      <RefColNames>origin_id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
   </database-model>
 </dataSource>

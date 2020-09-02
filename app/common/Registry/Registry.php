@@ -4,7 +4,12 @@ namespace app\common;
 
 
 use app\common\DB\CinemaManager;
+use app\common\DB\RatingManager;
 
+/**
+ * Class Registry
+ * @package app\common
+ */
 class Registry
 {
     private static $instance = null;
@@ -14,6 +19,9 @@ class Registry
     {
     }
 
+    /**
+     * @return Registry
+     */
     public static function instance(): self
     {
         if (is_null(self::$instance)) {
@@ -22,6 +30,9 @@ class Registry
         return self::$instance;
     }
 
+    /**
+     *
+     */
     public function setConf()
     {
         if (self::$conf === null) {
@@ -29,15 +40,29 @@ class Registry
         }
     }
 
-    public function getConf()
+    /**
+     * @return array
+     */
+    public function getConf(): array
     {
         $this->setConf();
         return self::$conf;
     }
 
-    public function getCinemaManager()
+    /**
+     * @return CinemaManager
+     */
+    public function getCinemaManager(): CinemaManager
     {
         return new CinemaManager();
+    }
+
+    /**
+     * @return RatingManager
+     */
+    public function getRatingManager(): RatingManager
+    {
+        return new RatingManager();
     }
 
 

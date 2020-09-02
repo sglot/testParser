@@ -6,13 +6,15 @@ namespace app\common\DB;
 use app\common\Registry;
 use PDO;
 
+/**
+ * Class Base
+ * @package app\common\DB
+ */
 abstract class Base
 {
     private $pdo;
     private $conf = null;
     private $reg = null;
-    private $stmts = [];
-
 
     public function __construct()
     {
@@ -35,6 +37,9 @@ abstract class Base
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
+    /**
+     * @return PDO
+     */
     public function getPdo(): PDO
     {
         return $this->pdo;
