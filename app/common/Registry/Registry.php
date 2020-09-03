@@ -5,6 +5,7 @@ namespace app\common;
 
 use app\common\DB\CinemaManager;
 use app\common\DB\RatingManager;
+use Doctrine\Common\Cache as DCache;
 
 /**
  * Class Registry
@@ -63,6 +64,15 @@ class Registry
     public function getRatingManager(): RatingManager
     {
         return new RatingManager();
+    }
+
+
+    /**
+     * @return Cache
+     */
+    public function getCache(): Cache
+    {
+        return new Cache(__DIR__ . '/../../../storage/cache');
     }
 
 

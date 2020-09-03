@@ -43,6 +43,10 @@ class ParserController extends Controller
      * @var \app\common\DB\CinemaManager
      */
     private $cinemaManager;
+    /**
+     * @var
+     */
+    private $cache;
 
     /**
      * ParserController constructor.
@@ -55,6 +59,7 @@ class ParserController extends Controller
         $this->client = $client;
         $this->registry = Registry::instance();
         $this->cinemaManager = $this->registry->getCinemaManager();
+        $this->cache = $this->registry->getCache();
 
     }
 
@@ -108,6 +113,7 @@ class ParserController extends Controller
             $this->cinemaManager->addCinemaList($res, $name);
         }
 
+        $this->cache->flushAll();
         echo 'script finished';
         $this->logger->info('Скрипт отработал успешно');
 

@@ -11,7 +11,7 @@ use app\common\HttpClient\HttpClient;
 
 $logger = new Logger('console');
 $logger->setTimezone(new \DateTimeZone('Europe/Moscow'));
-$logger->pushHandler(new StreamHandler(__DIR__ . '../../../logs/app.log', Logger::DEBUG));
+$logger->pushHandler(new StreamHandler(__DIR__ . '../../../storage/logs/app.log', Logger::DEBUG));
 
 
 try {
