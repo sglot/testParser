@@ -3,21 +3,21 @@
 
 namespace app\common\route;
 
-use app\controllers\CinemaController;
 use app\controllers\Controller;
+use app\controllers\RatingController;
 
 class Route
 {
     public static function run()
     {
-        $defaultClass = CinemaController::class;
+        $defaultClass = RatingController::class;
         $defaultAction = 'index';
 
         try {
             $path = str_replace('/testParser', '', $_SERVER['PATH_INFO']);
             $method = $_SERVER['REQUEST_METHOD'];
 
-            $routes = require_once __DIR__ . '\..\..\..\routes\routes.php';
+            $routes = require_once __DIR__ . '/../../../routes/routes.php';
 
             if (!isset($routes[$method][$path]) && !isset($routes[$method][$path . "/"])) {
                 throw new \Exception("Не существует роут $method $path");

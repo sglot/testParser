@@ -36,7 +36,7 @@ class Registry
     public function setConf()
     {
         if (self::$conf === null) {
-            self::$conf = require_once __DIR__ . '\..\..\..\conf\conf.php';
+            self::$conf = require_once __DIR__ . '/../../../conf/conf.php';
         }
     }
 

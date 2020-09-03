@@ -17,21 +17,6 @@ class CinemaController extends Controller
         $this->cinemaManager = $this->reg->getCinemaManager();
     }
 
-    /**
-     * return main view
-     */
-    public function index()
-    {
-        $categories = [];
-        foreach ($this->ratingManager->getRating() as $key => $row) {
-            $categories[$row['category']][$key] = $row;
-        }
-
-
-        $data['rating'] = $categories;
-        include_once '../views/index.php';
-
-    }
 
     /**
      * return detail info for modal window

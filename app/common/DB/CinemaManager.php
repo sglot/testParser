@@ -42,7 +42,7 @@ class CinemaManager extends Base
             $res = $stmt->fetch(\PDO::FETCH_ASSOC);
 
             if (isset($res['id'])) {
-                echo 'isset+++ updating';
+//                echo 'isset+++ updating';
                 $stmt = $pdo->prepare($this->updateRating);
                 $stmt->execute([
                         'cinema_id' => $cinema['detail']['id'],

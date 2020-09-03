@@ -16,7 +16,7 @@ use Monolog\Logger;
 class ParserController extends Controller
 {
 
-    const IMG_PATH = __DIR__ . '\..\..\upload\img\\';
+    const IMG_PATH = __DIR__ . '\..\..\web\upload\img\\';
 
     const URLS = [
         'Полный метр' => 'cinema/rating_top.php',
@@ -67,8 +67,6 @@ class ParserController extends Controller
 
             $doc = \phpQuery::newDocument($strOriginalEncoding);
             $p = $doc->find('title')->text();
-            var_dump($p);
-            echo "--------------<br><br><br><br>";
 
             $p = $doc->find('h3')->parent();
             $p = $p->find('center table ~ table');
@@ -84,13 +82,14 @@ class ParserController extends Controller
                 $pq = pq($tr);
                 $res[$trKey]['position'] = $pq->find('td:eq(0)')->text();
                 $res[$trKey]['title'] = $pq->find('td:eq(1)')->text();
-                $res[$trKey]['average_score'] = $pq->find('td:eq(2)')->text();
+                $res[$trKey]['calculated_score'] = $pq->find('td:eq(2)')->text();
                 $res[$trKey]['votes'] = $pq->find('td:eq(3)')->text();
-                $res[$trKey]['calculated_score'] = $pq->find('td:eq(4)')->text();
+                $res[$trKey]['average_score'] = $pq->find('td:eq(4)')->text();
 
                 $res[$trKey]['href'] = 'cinema/' . $pq->find('td:eq(1) > a')->attr('href');
                 $res[$trKey]['detail'] = $this->parseCinemaDetail($res[$trKey]['href']);
 
+                $res[$trKey]['title'] = str_replace( '[ТВ]', '', $res[$trKey]['title']);
                 $startYearPos = strpos($res[$trKey]['title'], '[');
                 $res[$trKey]['year'] = (int)substr($res[$trKey]['title'], $startYearPos + 1, 4);
                 $res[$trKey]['title'] = substr($res[$trKey]['title'], 0, $startYearPos - 1);
@@ -100,11 +99,12 @@ class ParserController extends Controller
                 }
             }
 
+            echo $name . ' ok' . PHP_EOL;
 
-            echo "<br><br><br><br><br>res===<br><pre>";
-            var_dump($res);
-            echo "--------------<br>";
-            echo mb_detect_encoding($p);
+//            echo "res= \n";
+//            var_dump($res);
+//            echo "-------------- \n";
+//            echo mb_detect_encoding($p);
             $this->cinemaManager->addCinemaList($res, $name);
         }
 
@@ -127,7 +127,7 @@ class ParserController extends Controller
         $res['description'] = $p;
 
         $res['img'] = 'cinema/' . $doc->find('img:eq(1)')->attr('src');
-        var_dump($res['img']);
+//        var_dump($res['img']);
         $res['id'] = mb_substr(stristr($url, 'id='), 3);
         $res['img_path'] = $this->getImage($res['img'], $res['id']);
 

@@ -2,13 +2,16 @@
 
 namespace app\console;
 
+require_once("C:\\xampp\\htdocs\\testParser\\vendor\\autoload.php");
+
 use app\controllers\ParserController;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use app\common\HttpClient\HttpClient;
 
 $logger = new Logger('console');
-$logger->pushHandler(new StreamHandler(__DIR__ . '..\..\..\logs\app.log', Logger::DEBUG));
+$logger->setTimezone(new \DateTimeZone('Europe/Moscow'));
+$logger->pushHandler(new StreamHandler(__DIR__ . '../../../logs/app.log', Logger::DEBUG));
 
 
 try {

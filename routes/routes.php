@@ -3,7 +3,8 @@
 return [
     'GET' =>
         [
-            '/' => 'app\controllers\CinemaController@index',
-            '/detail-json' => 'app\controllers\CinemaController@getDetailJson'
+            '/' => 'app\controllers\RatingController@index',
+            '/detail-json' => 'app\controllers\CinemaController@getDetailJson',
+            '/rating/list' => 'app\controllers\RatingController@getList'
         ]
 ];

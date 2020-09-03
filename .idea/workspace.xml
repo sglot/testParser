@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="70500cd3-ba36-4171-b99e-64eee3da8b4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common/DB/CinemaManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/DB/CinemaManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common/DB/RatingManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/DB/RatingManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/Registry/Registry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/Registry/Registry.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common/route/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/route/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/console/script.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/console/script.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/CinemaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CinemaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ParserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ParserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/web/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,63 +74,67 @@
     <session id="-53091067">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cinema" value="11" />
+          <entry key="cinema" value="13" />
           <entry key="doctrine_migration_versions" value="3" />
           <entry key="gitignore" value="2" />
-          <entry key="htaccess" value="1" />
+          <entry key="htaccess" value="2" />
           <entry key="jpg" value="10" />
-          <entry key="js" value="1" />
+          <entry key="js" value="3" />
           <entry key="json" value="5" />
-          <entry key="log" value="22" />
-          <entry key="md" value="1" />
-          <entry key="php" value="45" />
-          <entry key="ratings" value="8" />
-          <entry key="sql" value="9" />
+          <entry key="log" value="27" />
+          <entry key="md" value="2" />
+          <entry key="php" value="71" />
+          <entry key="ratings" value="12" />
+          <entry key="sql" value="14" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="22" />
+          <entry key="Database Element" value="28" />
           <entry key="Image" value="10" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="1" />
-          <entry key="Log" value="22" />
-          <entry key="Markdown" value="1" />
-          <entry key="PHP" value="45" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Scratch" value="9" />
-          <entry key="htaccess" value="1" />
+          <entry key="JavaScript" value="3" />
+          <entry key="Log" value="27" />
+          <entry key="Markdown" value="2" />
+          <entry key="PHP" value="71" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Scratch" value="14" />
+          <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="1" />
           <entry key="gitignore" value="24" />
-          <entry key="js" value="68" />
+          <entry key="htaccess" value="21" />
+          <entry key="js" value="1053" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
-          <entry key="php" value="5746" />
-          <entry key="sql" value="109" />
-          <entry key="txt" value="52" />
+          <entry key="php" value="6897" />
+          <entry key="sql" value="177" />
+          <entry key="txt" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="68" />
+          <entry key="JavaScript" value="1053" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="5745" />
-          <entry key="PLAIN_TEXT" value="76" />
+          <entry key="PHP" value="6896" />
+          <entry key="PLAIN_TEXT" value="98" />
           <entry key="SQL" value="1" />
-          <entry key="Scratch" value="110" />
+          <entry key="Scratch" value="178" />
+          <entry key="htaccess" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -139,40 +149,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/common/DB/CinemaManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="748">
+              <caret line="44" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/CinemaController.php">
+        <entry file="file://$PROJECT_DIR$/views/content-ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+            <state relative-caret-position="47">
+              <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#table#0;n#pre#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#pre#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#343#366#0#HTML" expanded="true" />
+                <element signature="e#437#460#0#HTML" expanded="true" />
+                <element signature="e#549#572#0#HTML" expanded="true" />
+                <element signature="e#769#792#0#HTML" expanded="true" />
+                <element signature="e#664#687#0#HTML" expanded="true" />
+                <element signature="e#574#600#0#HTML" expanded="true" />
+                <element signature="e#816#839#0#HTML" expanded="true" />
+                <element signature="e#1595#1617#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -180,8 +177,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/common/DB/RatingManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="174">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/RatingController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -203,27 +227,31 @@
       <list>
         <option value="$PROJECT_DIR$/migrations.php" />
         <option value="$PROJECT_DIR$/app/console/phpQuery/phpQuery/phpQuery.php" />
-        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/app/console/app.log" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/console/script.php" />
         <option value="$PROJECT_DIR$/conf/conf.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/logs/app.log" />
         <option value="$PROJECT_DIR$/app/common/DB/Base.php" />
         <option value="$PROJECT_DIR$/app/common/HttpClient/HttpClient.php" />
         <option value="$PROJECT_DIR$/migrations/Version20200831122438.php" />
-        <option value="$PROJECT_DIR$/app/common/Registry/Registry.php" />
-        <option value="$PROJECT_DIR$/app/common/DB/CinemaManager.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/controllers/CinemaController.php" />
         <option value="$PROJECT_DIR$/routes/routes.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql" />
+        <option value="$PROJECT_DIR$/app/common/Registry/Registry.php" />
+        <option value="$PROJECT_DIR$/web/index.php" />
         <option value="$PROJECT_DIR$/app/common/route/Route.php" />
-        <option value="$PROJECT_DIR$/app/common/DB/RatingManager.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ParserController.php" />
+        <option value="$PROJECT_DIR$/app/console/script.php" />
         <option value="$PROJECT_DIR$/views/index.php" />
+        <option value="$PROJECT_DIR$/app/controllers/RatingController.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/common/DB/RatingManager.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql" />
         <option value="$PROJECT_DIR$/web/js/main.js" />
+        <option value="$PROJECT_DIR$/web/robots.txt" />
+        <option value="$PROJECT_DIR$/web/.htaccess" />
+        <option value="$PROJECT_DIR$/views/content-ajax.php" />
+        <option value="$PROJECT_DIR$/app/common/DB/CinemaManager.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ParserController.php" />
       </list>
     </option>
   </component>
@@ -232,14 +260,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -290,6 +310,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,6 +387,11 @@
             <path>
               <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="testParser" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testParser" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,25 +399,32 @@
               <item name="testParser" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="testParser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="testParser" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\testParser\app\controllers" />
+      <recent name="C:\xampp\htdocs\testParser\app\common\DB" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\testParser\web" />
       <recent name="C:\xampp\htdocs\testParser" />
       <recent name="C:\xampp\htdocs\testParser\app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\testParser\app\common\DB" />
-      <recent name="C:\xampp\htdocs\testParser\app\controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -417,7 +450,8 @@
       <option name="presentableId" value="Default" />
       <updated>1598934843030</updated>
       <workItem from="1598934844466" duration="29784000" />
-      <workItem from="1599022536277" duration="28481000" />
+      <workItem from="1599022536277" duration="28666000" />
+      <workItem from="1599109024473" duration="20954000" />
     </task>
     <task id="LOCAL-00001" summary="find selectors">
       <created>1598952232834</created>
@@ -433,24 +467,31 @@
       <option name="project" value="LOCAL" />
       <updated>1598968822896</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="write categories">
+      <created>1599056655831</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1599056655831</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58265000" />
+    <option name="totallyTimeSpent" value="79404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16414523" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16641453" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.33442622" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.08196721" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Console" order="4" weight="0.5344262" />
+      <window_info anchor="bottom" id="Database Console" order="4" weight="0.6704918" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
@@ -474,7 +515,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="find selectors" />
-    <option name="LAST_COMMIT_MESSAGE" value="find selectors" />
+    <MESSAGE value="write categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="write categories" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/migrations-db.php">
@@ -509,24 +551,24 @@
     <entry file="file://$PROJECT_DIR$/app/app.log" />
     <entry file="file://$PROJECT_DIR$/app/console/app.log" />
     <entry file="file://$PROJECT_DIR$/web/4110.jpg" />
-    <entry file="file://$PROJECT_DIR$/upload/img/4110.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/4110.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/5397.jpg" />
+    <entry file="file://$PROJECT_DIR$/web/upload/img/5397.jpg" />
     <entry file="file://$PROJECT_DIR$/upload/img/8.jpg" />
-    <entry file="file://$PROJECT_DIR$/upload/img/65021.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/65021.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/24333.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/24333.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/5130.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/5130.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/547.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/547.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/upload/img/36896.jpg">
+    <entry file="file://$PROJECT_DIR$/web/upload/img/36896.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -543,10 +585,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.php">
+    <entry file="file://$PROJECT_DIR$/migrations/Version20200831122438.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/migrations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -557,19 +621,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/common/DB/Base.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="-138">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="e#34#58#0#PHP" expanded="true" />
@@ -584,85 +638,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations/Version20200831122438.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#56#88#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/common/Registry/Registry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="-206">
+          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
           <folding>
             <element signature="e#31#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/route/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding>
+            <element signature="e#37#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="1328" column="9" selection-start-line="1328" selection-start-column="9" selection-end-line="1328" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="154" column="66" lean-forward="true" selection-start-line="154" selection-start-column="66" selection-end-line="154" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/logs/app.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-276">
+        <state relative-caret-position="-567">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/console/script.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state relative-caret-position="90">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#31#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/route/Route.php">
+    <entry file="file://$PROJECT_DIR$/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="e#209#246#0#PHP" expanded="true" />
-          </folding>
+        <state>
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/CinemaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/DB/RatingManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7614b495-7e35-419e-93b4-bb7e645886dc/schema/test_parser/table/cinema">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="518">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -673,60 +720,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql">
+    <entry file="file://$PROJECT_DIR$/web/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7614b495-7e35-419e-93b4-bb7e645886dc/schema/test_parser/table/cinema">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/robots.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="56" lean-forward="true" selection-start-column="56" selection-end-column="56" />
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2104">
-          <caret line="24" column="77" selection-start-line="24" selection-start-column="77" selection-end-line="24" selection-end-column="77" />
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/console/script.php">
+    <entry file="file://$PROJECT_DIR$/views/content-ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="47">
+          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
           <folding>
-            <element signature="e#31#68#0#PHP" expanded="true" />
+            <element signature="e#343#366#0#HTML" expanded="true" />
+            <element signature="e#437#460#0#HTML" expanded="true" />
+            <element signature="e#549#572#0#HTML" expanded="true" />
+            <element signature="e#769#792#0#HTML" expanded="true" />
+            <element signature="e#664#687#0#HTML" expanded="true" />
+            <element signature="e#574#600#0#HTML" expanded="true" />
+            <element signature="e#816#839#0#HTML" expanded="true" />
+            <element signature="e#1595#1617#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7614b495-7e35-419e-93b4-bb7e645886dc/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/DB/RatingManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/DB/CinemaManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="748">
+          <caret line="44" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/migrations.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/RatingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="171">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ParserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#table#0;n#pre#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#pre#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="226">
+          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
         </state>
       </provider>
     </entry>
