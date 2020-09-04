@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\common\route;
+namespace app\common\Route;
 
 use app\controllers\Controller;
 use app\controllers\RatingController;

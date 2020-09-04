@@ -2,21 +2,17 @@
 
 namespace app\controllers;
 
-use app\common\Registry;
-
 class RatingController extends Controller
 {
-    private $reg;
-    private $ratingManager;
-    private $cinemaManager;
-    private $cache;
+    /**
+     * @var \app\services\RatingService
+     */
+    private $ratingService;
 
     public function __construct()
     {
-        $this->reg = Registry::instance();
-        $this->ratingManager = $this->reg->getRatingManager();
-        $this->cinemaManager = $this->reg->getCinemaManager();
-        $this->cache = $this->reg->getCache();
+        parent::__construct();
+        $this->ratingService = $this->reg->getRatingService();
     }
 
     /**
@@ -24,21 +20,12 @@ class RatingController extends Controller
      */
     public function index()
     {
-//        $this->cache->flushAll();
         $date = new \DateTime();
-        $name = sprintf('cache_rating_%s_%s_%s', $date->format('Y-m-d'), 'pos', 'asc');
-        if (!$cachedData = $this->cache->fetch($name)) {
-            $categories = [];
-            foreach ($this->ratingManager->getRating() as $key => $row) {
-                $categories[$row['category']][$key] = $row;
-            }
-            $cachedData = $categories;
-            $this->cache->save($name, $cachedData, 24 * 60 * 60);
-        }
+        $date = $date->format('Y-m-d');
+        $cacheName = sprintf('cache_rating_%s_pos_asc', $date);
 
-        $data['rating'] = $cachedData;
+        $data['rating'] = $this->ratingService->getRating($cacheName, 'pos', 'asc', $date);
         include_once '../views/index.php';
-
     }
 
 
@@ -47,45 +34,8 @@ class RatingController extends Controller
      */
     public function getList()
     {
-        $res = [];
-        $date = null;
-        $date = filter_input(INPUT_GET, 'date');
-        if ($date && !$this->isDate($date)) {
-            return;
-        }
-
-        $filter = filter_input(INPUT_GET, 'filter');
-        if (!$filter) {
-            $filter = 'pos';
-        }
-
-        $sort = filter_input(INPUT_GET, 'sort');
-        if (!$sort) {
-            $sort = 'asc';
-        }
-
-        $name = sprintf('cache_rating_%s_%s_%s', $date, $filter, $sort);
-        if (!$cachedData = $this->cache->fetch($name)) {
-            var_dump('cache no');
-            $categories = [];
-            foreach ($this->ratingManager->getRating($filter, $sort, $date) as $key => $row) {
-                $categories[$row['category']][$key] = $row;
-            }
-
-            $cachedData = $categories;
-            $this->cache->save($name, $cachedData, 24 * 60 * 60);
-        }
-
-        $data['rating'] = $cachedData;
+        $data['rating'] = $this->ratingService->getList();
         include_once '../views/content-ajax.php';
-
     }
 
-    /**
-     * @param $str
-     * @return bool
-     */
-    private function isDate($str){
-        return is_numeric(strtotime($str));
-    }
 }

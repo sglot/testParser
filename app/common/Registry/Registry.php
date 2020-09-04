@@ -5,7 +5,10 @@ namespace app\common;
 
 use app\common\DB\CinemaManager;
 use app\common\DB\RatingManager;
-use Doctrine\Common\Cache as DCache;
+use app\common\HttpClient\HttpClient;
+use app\services\CinemaService;
+use app\services\ParserService;
+use app\services\RatingService;
 
 /**
  * Class Registry
@@ -75,6 +78,38 @@ class Registry
         return new Cache(__DIR__ . '/../../../storage/cache');
     }
 
+    /**
+     * @return CinemaService
+     */
+    public function getCinemaService(): CinemaService
+    {
+        return new CinemaService();
+    }
+
+    /**
+     * @param $logger
+     * @return ParserService
+     */
+    public function getParserService($logger): ParserService
+    {
+        return new ParserService($logger);
+    }
+
+    /**
+     * @return RatingService
+     */
+    public function getRatingService(): RatingService
+    {
+        return new RatingService();
+    }
+
+    /**
+     * @return HttpClient
+     */
+    public function getClient(): HttpClient
+    {
+        return new HttpClient();
+    }
 
 
 

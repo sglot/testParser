@@ -18,13 +18,14 @@ class RatingManager extends Base
      * @param string $date
      * @return array
      */
-    public function getRating(string $filter = 'pos', string $sort='asc', string $date = null)
+    public function getRating(string $filter = 'pos', string $sort='asc', string $date = null): array
     {
         $pdo = $this->getPdo();
 
         if (!$date) {
             $date = $this->findNewestDate();
         }
+
         $this->findRating = sprintf($this->findRating, $filter, $sort);
         $stmt = $pdo->prepare($this->findRating);
         $stmt->execute([

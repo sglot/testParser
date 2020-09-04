@@ -19,59 +19,80 @@ class CinemaManager extends Base
      * @param array $list
      * @param string $category
      */
-    public function addCinemaList(array $list, string $category)
+    public function addCinemaList(array $list, string $category): void
     {
         $pdo = $this->getPdo();
-        foreach ($list as $cinema) {
-            $stmt = $pdo->prepare($this->addCinema);
-            $stmt->execute([
-                    $cinema['detail']['id'],
-                    $cinema['title'],
-                    $category,
-                    $cinema['detail']['img_path'],
-                    $cinema['detail']['description'],
-                    $cinema['year']
-                ]
-            );
 
-            $stmt = $pdo->prepare($this->selectRatingIdIfDuplicate);
-            $stmt->execute([
-                    'cinema_id' => $cinema['detail']['id'],
-                ]
-            );
-            $res = $stmt->fetch(\PDO::FETCH_ASSOC);
+        foreach ($list as $cinema) {
+
+            $this->addCinema($pdo, $cinema, $category);
+
+            $res = $this->selectRatingIdIfDuplicate($pdo, $cinema);
 
             if (isset($res['id'])) {
-//                echo 'isset+++ updating';
-                $stmt = $pdo->prepare($this->updateRating);
-                $stmt->execute([
-                        'cinema_id' => $cinema['detail']['id'],
-                        'pos' => $cinema['position'],
-                        'average_score' => $cinema['average_score'],
-                        'calculated_score' => $cinema['calculated_score'],
-                        'votes' => $cinema['votes'],
-                    ]
-                );
+                $this->updateRating($pdo, $cinema);
                 continue;
             }
-//            var_dump($res); die();
 
-            $stmt = $pdo->prepare($this->addRating);
-            $stmt->execute([
-                    $cinema['detail']['id'],
-                    $cinema['position'],
-                    $category,
-                    $cinema['average_score'],
-                    $cinema['calculated_score'],
-                    $cinema['votes'],
-                ]
-            );
-
-
+            $this->addRating($pdo, $cinema, $category);
         }
-
     }
 
+    private function addCinema(\PDO $pdo, array $cinema, string $category): void
+    {
+        $stmt = $pdo->prepare($this->addCinema);
+        $stmt->execute([
+                $cinema['detail']['id'],
+                $cinema['title'],
+                $category,
+                $cinema['detail']['img_path'],
+                $cinema['detail']['description'],
+                $cinema['year']
+            ]
+        );
+    }
+
+    private function selectRatingIdIfDuplicate(\PDO $pdo, array $cinema)
+    {
+        $stmt = $pdo->prepare($this->selectRatingIdIfDuplicate);
+        $stmt->execute([
+                'cinema_id' => $cinema['detail']['id'],
+            ]
+        );
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    private function updateRating(\PDO $pdo, array $cinema): void
+    {
+        $stmt = $pdo->prepare($this->updateRating);
+        $stmt->execute([
+                'cinema_id' => $cinema['detail']['id'],
+                'pos' => $cinema['position'],
+                'average_score' => $cinema['average_score'],
+                'calculated_score' => $cinema['calculated_score'],
+                'votes' => $cinema['votes'],
+            ]
+        );
+    }
+
+    private function addRating(\PDO $pdo, array $cinema, string $category): void
+    {
+        $stmt = $pdo->prepare($this->addRating);
+        $stmt->execute([
+                $cinema['detail']['id'],
+                $cinema['position'],
+                $category,
+                $cinema['average_score'],
+                $cinema['calculated_score'],
+                $cinema['votes'],
+            ]
+        );
+    }
+
+    /**
+     * @param int $origin_id
+     * @return array
+     */
     public function getCinemaByOriginId(int $origin_id): array
     {
         $pdo = $this->getPdo();

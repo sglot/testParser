@@ -3,10 +3,7 @@
 if (!isset($data['rating']) || empty($data['rating'])):
     echo 'Нет данных';
 else:
-//                var_dump($data['rating']);
-    foreach ($data['rating'] as $nameCategory => $category):
-        ?>
-
+    foreach ($data['rating'] as $nameCategory => $category):?>
 
         <table class="table m-4">
             <thead>
@@ -29,7 +26,7 @@ else:
                     <td style="cursor: pointer"
                         onclick="getDetail(<?= $cinema['origin_id'] ?>)"
                         data-toggle="modal"
-                        data-target="#exampleModal"
+                        data-target="#detailModal"
                     >
                         <img src="upload/img/<?= $cinema['image'] ?>"
                              style="height: 100px;"
@@ -44,9 +41,7 @@ else:
             </tbody>
         </table>
 
-
     <?php
     endforeach;
 endif;
-
 ?>

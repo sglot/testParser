@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "guzzlehttp/guzzle": "^6.5",
-        "phpfastcache/phpfastcache": "^7.1",
         "doctrine/cache": "^1.10",
         "doctrine/migrations": "^3.0",
         "monolog/monolog": "^2.1",
