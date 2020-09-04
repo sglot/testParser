@@ -132,7 +132,7 @@ class ParserService extends BaseService
             die();
         }
 
-        return $id . '.jpg';
+        return 'upload/img/' . $id . '.jpg';
     }
 
 }

@@ -14,7 +14,7 @@
 
             <form>
                 <div class="form-group d-flex flex-row justify-content-center">
-                    <input type="text" style="width: 30%; text-align: center" class="form-control m-2" id="dateInput" required placeholder="2020-08-31" value="2020-09-02">
+                    <input type="text" style="width: 30%; text-align: center" class="form-control m-2" id="dateInput" required placeholder="2020-08-31">
                     <button id="findDataBtn" type="button" class="btn btn-primary m-2">Выбрать по дате</button>
                 </div>
             </form>

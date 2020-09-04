@@ -22,13 +22,13 @@ else:
             <tbody>
             <?php foreach ($category as $key => $cinema): ?>
                 <tr>
-                    <th scope="row"><?= $cinema['pos'] ?>(<?= $cinema['date_created'] ?>)</th>
+                    <th scope="row" title="(<?= $cinema['date_created'] ?>)"><?= $cinema['pos'] ?></th>
                     <td style="cursor: pointer"
                         onclick="getDetail(<?= $cinema['origin_id'] ?>)"
                         data-toggle="modal"
                         data-target="#detailModal"
                     >
-                        <img src="upload/img/<?= $cinema['image'] ?>"
+                        <img src="<?= $cinema['image'] ?>"
                              style="height: 100px;"
                              title="<?= $cinema['title'] ?>">
                     </td>

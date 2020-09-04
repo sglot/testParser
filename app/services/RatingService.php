@@ -58,7 +58,6 @@ class RatingService extends BaseService
     public function getRating($name, $filter, $sort, $date)
     {
         if (!$cachedData = $this->cache->fetch($name)) {
-            var_dump('cache no');
             $categories = [];
             foreach ($this->ratingManager->getRating($filter, $sort, $date) as $key => $row) {
                 $categories[$row['category']][$key] = $row;
@@ -69,6 +68,4 @@ class RatingService extends BaseService
         }
         return $cachedData;
     }
-
-
 }

@@ -18,12 +18,12 @@ class CinemaService extends BaseService
         $this->cinemaManager = $this->reg->getCinemaManager();
     }
 
+
     public function getDetailJson()
     {
         $origin_id = (int)filter_input(INPUT_GET, 'id');
         if ($origin_id === 0) {
-            echo 'error';
-            return;
+            return 'error';
         }
 
         $name = 'cache_detail_' . $origin_id;
@@ -32,5 +32,7 @@ class CinemaService extends BaseService
             $cachedData = json_encode($cachedData, JSON_UNESCAPED_UNICODE);
             $this->cache->save($name, $cachedData, 24 * 60 * 60);
         }
+
+        return $cachedData;
     }
 }
