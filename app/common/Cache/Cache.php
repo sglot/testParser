@@ -1,6 +1,6 @@
 <?php
 
-namespace app\common;
+namespace app\common\Cache;
 
 
 use Doctrine\Common\Cache\FilesystemCache;

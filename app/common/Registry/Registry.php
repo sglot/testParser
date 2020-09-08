@@ -1,8 +1,9 @@
 <?php
 
-namespace app\common;
+namespace app\common\Registry;
 
 
+use app\common\Cache\Cache;
 use app\common\DB\CinemaManager;
 use app\common\DB\RatingManager;
 use app\common\HttpClient\HttpClient;

@@ -10,6 +10,6 @@
 
 ***
 
-####Команды
+#### Команды
 1. Запуск миграций `./vendor/bin/doctrine-migrations migrate`
 2. Запуск скрипта `php path/to/web/server/testParser/app/console/script.php`

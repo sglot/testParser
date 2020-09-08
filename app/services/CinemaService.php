@@ -3,8 +3,6 @@
 namespace app\services;
 
 
-use app\controllers\BaseService;
-
 class CinemaService extends BaseService
 {
     /**

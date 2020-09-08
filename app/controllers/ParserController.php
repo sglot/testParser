@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-require __DIR__ . '/../../app/console/phpQuery/phpQuery/phpQuery.php';
+//require __DIR__ . '/../../app/console/phpQuery/phpQuery/phpQuery.php';
 
 use Monolog\Logger;
 

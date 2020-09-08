@@ -4,7 +4,6 @@ namespace app\services;
 
 
 use app\common\HttpClient\HttpClient;
-use app\controllers\BaseService;
 use Monolog\Logger;
 
 class ParserService extends BaseService

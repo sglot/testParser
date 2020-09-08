@@ -15,6 +15,9 @@
     "autoload": {
         "psr-4": {
             "app\\": "app"
-        }
+        },
+        "files": [
+            "app/console/phpQuery/phpQuery/phpQuery.php"
+        ]
     }
 }

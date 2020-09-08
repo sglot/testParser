@@ -2,7 +2,7 @@
 
 
 namespace app\controllers;
-use app\common\Registry;
+use app\common\Registry\Registry;
 
 class Controller
 {

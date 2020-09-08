@@ -1,8 +1,8 @@
 <?php
 
 
-namespace app\controllers;
-use app\common\Registry;
+namespace app\services;
+use app\common\Registry\Registry;
 
 class BaseService
 {

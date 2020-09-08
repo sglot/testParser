@@ -3,7 +3,7 @@
 namespace app\common\DB;
 
 
-use app\common\Registry;
+use app\common\Registry\Registry;
 use PDO;
 
 /**

@@ -2,7 +2,6 @@
 
 namespace app\services;
 
-use app\controllers\BaseService;
 
 class RatingService extends BaseService
 {

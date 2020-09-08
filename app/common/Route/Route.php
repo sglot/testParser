@@ -14,7 +14,7 @@ class Route
         $defaultAction = 'index';
 
         try {
-            $path = str_replace('/testParser', '', $_SERVER['PATH_INFO']);
+            $path = str_replace('/testParser', '', $_SERVER['PATH_INFO'] ?? '/');
             $method = $_SERVER['REQUEST_METHOD'];
 
             $routes = require_once __DIR__ . '/../../../routes/routes.php';
